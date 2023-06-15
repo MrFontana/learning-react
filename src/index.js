@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-function Custom() {
-	return <span>custom</span>;
-}
+import "./index.css";
 
 function HelloWorld() {
 	const name = "Kevin";
@@ -20,10 +17,15 @@ function HelloWorld() {
 	// React.createContext(Custom)
 	// );
 	return (
-		<div>
-			<h1>This is a hello</h1>
+		<div className="dark">
+			<h1 onDoubleClick={() => console.log("hello")}>This is a hello</h1>
+			<label htmlFor="email">Emal</label>
+			<input id="email" />
+			{/* this is a comment*/}
+			{
+				// this is also a comment
+			}
 			Hello <strong>{name}!</strong>
-			<Custom />
 		</div>
 	);
 }
